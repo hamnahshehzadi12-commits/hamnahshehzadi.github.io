@@ -7,6 +7,8 @@
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -21,6 +23,8 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button id="mode-toggle">🌙</button>
     </nav>
 </header>
 
@@ -29,14 +33,13 @@
 <section id="home" class="home">
     <div class="home-container">
 
-        <div class="home-text">
+        <div class="content">
             <h1>Hello, I'm <span>Hamnah</span></h1>
-            <h3>Web Designer & Web Developer</h3>
-            <p>I create modern, responsive and professional websites.</p>
+            <h3>I am <span class="typing"></span></h3>
             <a href="#" class="btn">Download CV</a>
         </div>
 
-        <div class="home-image">
+        <div class="home-img">
             <img src="profile.png" alt="Hamnah Shehzadi">
         </div>
 
@@ -45,11 +48,12 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="section">
+<section id="about" class="about">
     <h2>About Me</h2>
     <p>
         I am a passionate Web Designer & Developer who creates clean,
-        responsive and modern websites.
+        responsive and modern websites. I love turning ideas into
+        beautiful digital experiences.
     </p>
 </section>
 
@@ -61,17 +65,17 @@
 
         <div class="card">
             <h3>Web Design</h3>
-            <p>Modern and responsive designs.</p>
+            <p>Modern and responsive website designs.</p>
         </div>
 
         <div class="card">
             <h3>Web Development</h3>
-            <p>Clean and optimized coding.</p>
+            <p>Clean and optimized coding solutions.</p>
         </div>
 
         <div class="card">
             <h3>Website Maintenance</h3>
-            <p>Regular updates & improvements.</p>
+            <p>Regular updates and improvements.</p>
         </div>
 
     </div>
@@ -85,12 +89,12 @@
 
         <div class="card">
             <h3>Portfolio Website</h3>
-            <p>Modern portfolio design.</p>
+            <p>Modern personal portfolio design.</p>
         </div>
 
         <div class="card">
             <h3>Business Website</h3>
-            <p>Responsive landing page.</p>
+            <p>Responsive landing page for clients.</p>
         </div>
 
         <div class="card">
@@ -105,12 +109,22 @@
 
 <section id="contact" class="section">
     <h2>Contact Me</h2>
-    <p>Email: youremail@gmail.com</p>
+
+    <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+    </form>
 </section>
 
-<footer>
+<!-- FOOTER -->
+
+<footer class="footer">
     <p>© 2026 Hamnah Shehzadi | All Rights Reserved</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
