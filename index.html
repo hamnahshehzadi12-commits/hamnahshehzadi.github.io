@@ -3,12 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hamnah Shehzadi | Web Designer & Developer</title>
+<title>Hamnah Shehzadi | Web Developer</title>
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -16,11 +14,11 @@
 <header>
     <nav>
         <h2 class="logo">Hamnah Shehzadi</h2>
-        <ul>
+
+        <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#services">Services</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
@@ -33,14 +31,14 @@
 <section id="home" class="home">
     <div class="home-container">
 
-        <div class="content">
+        <div class="home-text">
             <h1>Hello, I'm <span>Hamnah</span></h1>
             <h3>I am <span class="typing"></span></h3>
-            <a href="#" class="btn">Download CV</a>
+            <a href="cv.pdf" download class="btn">Download CV</a>
         </div>
 
-        <div class="home-img">
-            <img src="profile.png" alt="Hamnah Shehzadi">
+        <div class="home-image">
+            <img src="profile.png" alt="Profile">
         </div>
 
     </div>
@@ -48,60 +46,36 @@
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about" class="section">
     <h2>About Me</h2>
-    <p>
-        I am a passionate Web Designer & Developer who creates clean,
-        responsive and modern websites. I love turning ideas into
-        beautiful digital experiences.
-    </p>
+    <p>I create clean, responsive and modern websites for clients worldwide.</p>
 </section>
 
 <!-- SERVICES -->
 
 <section id="services" class="section">
     <h2>My Services</h2>
-    <div class="service-box">
 
-        <div class="card">
+    <div class="services-grid">
+        <div class="service-card">
             <h3>Web Design</h3>
-            <p>Modern and responsive website designs.</p>
+            <p>Modern UI/UX designs.</p>
         </div>
 
-        <div class="card">
+        <div class="service-card">
             <h3>Web Development</h3>
-            <p>Clean and optimized coding solutions.</p>
+            <p>Clean and optimized coding.</p>
         </div>
 
-        <div class="card">
-            <h3>Website Maintenance</h3>
-            <p>Regular updates and improvements.</p>
+        <div class="service-card">
+            <h3>Responsive Design</h3>
+            <p>Mobile friendly layouts.</p>
         </div>
 
-    </div>
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects" class="section">
-    <h2>My Projects</h2>
-    <div class="service-box">
-
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Modern personal portfolio design.</p>
+        <div class="service-card">
+            <h3>Maintenance</h3>
+            <p>Regular updates & fixes.</p>
         </div>
-
-        <div class="card">
-            <h3>Business Website</h3>
-            <p>Responsive landing page for clients.</p>
-        </div>
-
-        <div class="card">
-            <h3>E-commerce Layout</h3>
-            <p>Clean product showcase layout.</p>
-        </div>
-
     </div>
 </section>
 
@@ -109,18 +83,10 @@
 
 <section id="contact" class="section">
     <h2>Contact Me</h2>
-
-    <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
-    </form>
+    <p>Email: youremail@gmail.com</p>
 </section>
 
-<!-- FOOTER -->
-
-<footer class="footer">
+<footer>
     <p>© 2026 Hamnah Shehzadi | All Rights Reserved</p>
 </footer>
 
