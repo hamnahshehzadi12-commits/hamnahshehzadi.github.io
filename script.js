@@ -1,26 +1,57 @@
 // Typing Animation
-const text = ["Web Developer", "Web Designer", "Freelancer"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
+const words = ["Web Developer", "Frontend Designer", "Freelancer"];
+let i = 0;
+let j = 0;
+let currentWord = "";
+let isDeleting = false;
+const typingElement = document.querySelector(".typing");
 
-(function type(){
-    if(count === text.length){
-        count = 0;
+function type() {
+  currentWord = words[i];
+  
+  if (isDeleting) {
+    typingElement.textContent = currentWord.substring(0, j--);
+  } else {
+    typingElement.textContent = currentWord.substring(0, j++);
+  }
+
+  if (!isDeleting && j === currentWord.length) {
+    isDeleting = true;
+    setTimeout(type, 1000);
+    return;
+  }
+
+  if (isDeleting && j === 0) {
+    isDeleting = false;
+    i = (i + 1) % words.length;
+  }
+
+  setTimeout(type, isDeleting ? 50 : 100);
+}
+type();
+
+// Dark Mode
+document.getElementById("modeToggle").onclick = function(){
+  document.body.classList.toggle("dark");
+};
+
+// Scroll Reveal
+function reveal(){
+  let reveals = document.querySelectorAll(".reveal");
+  reveals.forEach(el=>{
+    let windowHeight = window.innerHeight;
+    let elementTop = el.getBoundingClientRect().top;
+    if(elementTop < windowHeight - 100){
+      el.classList.add("active");
     }
-    currentText = text[count];
-    letter = currentText.slice(0, ++index);
+  });
+}
+window.addEventListener("scroll", reveal);
 
-    document.querySelector(".typing").textContent = letter;
-    if(letter.length === currentText.length){
-        count++;
-        index = 0;
-    }
-    setTimeout(type, 150);
-})();
+// Hamburger Menu
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-// Dark Mode Toggle
-document.getElementById("mode-toggle").onclick = function(){
-    document.body.classList.toggle("dark");
+menuToggle.onclick = function(){
+  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
 };
