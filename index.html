@@ -1,33 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hamnah Shehzadi Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- Navbar -->
 <nav>
   <div class="logo">Hamnah Shehzadi</div>
-
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
+  <ul>
+    <li><a href="#">Home</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
     <li><button id="modeToggle">🌙</button></li>
   </ul>
-
-  <div class="menu-toggle">☰</div>
 </nav>
 
-<!-- HERO -->
-<section id="home" class="hero reveal">
+<!-- Hero Section -->
+<section class="hero">
   <div class="text">
     <h1>Hello, I'm Hamnah</h1>
     <h3>I am <span class="typing"></span></h3>
-    <a href="cv.pdf" download class="cv-btn">Download CV</a>
+    <button class="cv-btn">Download CV</button>
   </div>
 
   <div class="image">
@@ -35,8 +30,8 @@
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="services" class="section reveal">
+<!-- Services -->
+<section id="services" class="section">
   <h2>My Services</h2>
   <div class="cards">
     <div class="card">Website Design</div>
@@ -45,20 +40,14 @@
   </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="section reveal">
+<!-- Projects -->
+<section id="projects" class="section">
   <h2>My Projects</h2>
   <div class="cards">
     <div class="card">Portfolio Website</div>
     <div class="card">Tutor Academy Site</div>
     <div class="card">E-Commerce UI</div>
   </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section reveal">
-  <h2>Contact Me</h2>
-  <p>Email: hamnah@example.com</p>
 </section>
 
 <script src="script.js"></script>
