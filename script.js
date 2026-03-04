@@ -28,30 +28,10 @@ function type() {
 
   setTimeout(type, isDeleting ? 50 : 100);
 }
+
 type();
 
-// Dark Mode
+// Dark Mode Toggle
 document.getElementById("modeToggle").onclick = function(){
   document.body.classList.toggle("dark");
-};
-
-// Scroll Reveal
-function reveal(){
-  let reveals = document.querySelectorAll(".reveal");
-  reveals.forEach(el=>{
-    let windowHeight = window.innerHeight;
-    let elementTop = el.getBoundingClientRect().top;
-    if(elementTop < windowHeight - 100){
-      el.classList.add("active");
-    }
-  });
-}
-window.addEventListener("scroll", reveal);
-
-// Hamburger Menu
-const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
-
-menuToggle.onclick = function(){
-  navLinks.style.display = navLinks.style.display === "flex" ? "none" : "flex";
 };
